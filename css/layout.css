@@ -1,0 +1,226 @@
+/* ─── QUOTE ─── */
+.quote-section {
+    padding: 80px 24px;
+    background: var(--warm-white);
+    text-align: center;
+}
+
+.quote-section blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    font-style: italic;
+    color: var(--petrol);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 24px;
+    position: relative;
+}
+
+.quote-section blockquote::before {
+    content: '\201C';
+    font-size: 5rem;
+    color: var(--cream);
+    position: absolute;
+    top: -40px;
+    left: -10px;
+    line-height: 1;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.quote-section .quote-footer {
+    font-weight: 700;
+    color: var(--petrol);
+    font-size: 0.95rem;
+}
+
+/* ─── BIO ─── */
+.bio-section {
+    padding: 80px 24px;
+    background: var(--champagne);
+}
+
+.bio-card {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+}
+
+.bio-card:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.bio-photo {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 3px solid var(--gold);
+}
+
+.bio-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--petrol);
+    margin-bottom: 6px;
+}
+
+.bio-card p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.bio-together {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--silver-dark);
+    text-align: center;
+    max-width: 480px;
+    margin: 32px auto 0;
+}
+
+/* ─── FAQ ─── */
+.faq-section {
+    padding: 80px 24px;
+    background: var(--warm-white);
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border);
+}
+
+.faq-item summary {
+    padding: 20px 0;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--petrol);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    font-size: 1.4rem;
+    color: var(--gold);
+    font-weight: 300;
+    transition: transform 0.3s;
+}
+
+.faq-item[open] summary::after {
+    content: '\2212';
+}
+
+.faq-item .faq-answer {
+    padding: 0 0 20px;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* ─── FOOTER ─── */
+.footer {
+    background: var(--petrol);
+    color: rgba(255, 255, 255, 0.35);
+    text-align: center;
+    padding: 40px 24px;
+    font-size: 0.75rem;
+}
+
+/* ─── STICKY MOBILE BAR ─── */
+.mobile-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(27, 54, 93, 0.97);
+    backdrop-filter: blur(8px);
+    padding: 12px 20px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    border-top: 1px solid rgba(197, 153, 58, 0.3);
+}
+
+@media (max-width: 768px) {
+    .mobile-bar {
+        display: flex;
+    }
+
+    body {
+        padding-bottom: 72px;
+    }
+}
+
+.mobile-bar .bar-price {
+    color: #fff;
+}
+
+.mobile-bar .bar-price .old {
+    font-size: 0.7rem;
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, 0.4);
+    display: block;
+    line-height: 1;
+}
+
+.mobile-bar .bar-price .new {
+    font-size: 1.3rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.mobile-bar .bar-cta {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--warm-white);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 3px;
+}
+
+/* ─── REVEAL ANIMATION ─── */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

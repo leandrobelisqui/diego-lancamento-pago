@@ -1,0 +1,208 @@
+/* ─── CTA BUTTON ─── */
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 18px 36px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(197, 153, 58, 0.3);
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(197, 153, 58, 0.45);
+}
+
+.cta-btn svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s;
+}
+
+.cta-btn:hover svg {
+    transform: translateX(3px);
+}
+
+.cta-meta {
+    margin-top: 16px;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.cta-meta .price-old {
+    text-decoration: line-through;
+    color: var(--silver);
+}
+
+.cta-meta .price-new {
+    font-weight: 800;
+    color: var(--petrol);
+    font-size: 1.1rem;
+}
+
+.cta-guarantee {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--gold-dark);
+    background: rgba(197, 153, 58, 0.08);
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(197, 153, 58, 0.15);
+}
+
+/* ─── DIVIDER ─── */
+.divider {
+    width: 40px;
+    height: 2px;
+    background: var(--gold);
+    margin: 0 auto;
+}
+
+/* ─── PAIN SECTION ─── */
+.pain-section {
+    background: var(--petrol);
+    color: #fff;
+    padding: 80px 24px;
+    position: relative;
+}
+
+.pain-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+}
+
+.pain-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 32px;
+}
+
+.pain-title span {
+    color: var(--gold-light);
+}
+
+.pain-text {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 16px;
+}
+
+.pain-highlight {
+    background: rgba(197, 153, 58, 0.12);
+    border-left: 3px solid var(--gold);
+    padding: 20px 24px;
+    margin-top: 32px;
+    border-radius: 0 8px 8px 0;
+}
+
+.pain-highlight p {
+    font-weight: 700;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ─── OFFER ─── */
+.offer-section {
+    padding: 100px 24px;
+    background: var(--petrol);
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.offer-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+}
+
+.offer-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 4vw, 2.4rem);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.offer-price-block {
+    margin: 32px 0;
+}
+
+.offer-price-old {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: line-through;
+}
+
+.offer-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    line-height: 1;
+}
+
+.offer-price sup {
+    font-size: 2rem;
+    vertical-align: super;
+    margin-right: 4px;
+}
+
+.offer-subtitle {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 40px;
+}
+
+.offer-section .cta-btn {
+    font-size: 1.05rem;
+    padding: 20px 48px;
+}
+
+.offer-trust-row {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.offer-trust-item {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.offer-trust-item svg {
+    width: 16px;
+    height: 16px;
+    color: var(--gold);
+}

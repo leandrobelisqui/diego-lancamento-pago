@@ -1,0 +1,211 @@
+/* ═══════════════════════════════════════════
+   MODAL — LEAD CAPTURE
+   ═══════════════════════════════════════════ */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(27, 54, 93, 0.6);
+    backdrop-filter: blur(6px);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-box {
+    background: #FEFCF7;
+    border-radius: 16px;
+    max-width: 440px;
+    width: 100%;
+    padding: 40px 32px 32px;
+    position: relative;
+    box-shadow: 0 24px 80px rgba(27, 54, 93, 0.25), 0 0 0 1px rgba(197, 153, 58, 0.12);
+    transform: translateY(20px) scale(0.97);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-box {
+    transform: translateY(0) scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #A8B0B5;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s, color 0.2s;
+}
+
+.modal-close:hover {
+    background: rgba(27, 54, 93, 0.06);
+    color: #1B365D;
+}
+
+.modal-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1B365D;
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
+
+.modal-subtitle {
+    font-size: 0.85rem;
+    color: #6B6B6B;
+    margin-bottom: 28px;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modal-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.modal-field label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #1B365D;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.modal-field input {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.95rem;
+    padding: 14px 16px;
+    border: 1.5px solid #E8E0D0;
+    border-radius: 8px;
+    background: #fff;
+    color: #3D3D3D;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.modal-field input::placeholder {
+    color: #A8B0B5;
+}
+
+.modal-field input:focus {
+    border-color: #C5993A;
+    box-shadow: 0 0 0 3px rgba(197, 153, 58, 0.1);
+}
+
+.modal-field input.input-error {
+    border-color: #D94F4F;
+    box-shadow: 0 0 0 3px rgba(217, 79, 79, 0.08);
+}
+
+.modal-field .field-error {
+    font-size: 0.75rem;
+    color: #D94F4F;
+    min-height: 16px;
+}
+
+.modal-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #C5993A 0%, #A67C2E 100%);
+    color: #fff;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 0.92rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(197, 153, 58, 0.3);
+    margin-top: 4px;
+}
+
+.modal-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(197, 153, 58, 0.45);
+}
+
+.modal-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.modal-submit .spinner {
+    display: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+.modal-submit.loading .spinner {
+    display: block;
+}
+
+.modal-submit.loading .btn-text {
+    display: none;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.modal-trust {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.75rem;
+    color: #A8B0B5;
+}
+
+.modal-trust svg {
+    width: 14px;
+    height: 14px;
+    color: #C5993A;
+}
+
+@media (max-width: 480px) {
+    .modal-box {
+        padding: 32px 20px 24px;
+    }
+
+    .modal-title {
+        font-size: 1.35rem;
+    }
+}

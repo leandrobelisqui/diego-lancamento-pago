@@ -1,0 +1,137 @@
+/* ═══════════════════════════════════════════
+   DESIGN SYSTEM — "EDITORIAL MÉDICO DE LUXO"
+   Paleta extraída do logo real:
+   Gold:      #C5993A / #D4A94E / #B8882E
+   Petrol:    #1B365D / #234B7A
+   Silver:    #A8B0B5 / #8B939A
+   Champagne: #F5ECD7 / #FAF6ED / #FBF8F0
+   ═══════════════════════════════════════════ */
+
+:root {
+    --gold: #C5993A;
+    --gold-light: #D4A94E;
+    --gold-dark: #A67C2E;
+    --petrol: #1B365D;
+    --petrol-mid: #234B7A;
+    --petrol-light: #2D5F9A;
+    --silver: #A8B0B5;
+    --silver-dark: #6B7280;
+    --champagne: #FAF6ED;
+    --cream: #F5ECD7;
+    --warm-white: #FEFCF7;
+    --text-body: #3D3D3D;
+    --text-muted: #6B6B6B;
+    --text-light: #9A9A9A;
+    --border: #E8E0D0;
+    --cta-from: #C5993A;
+    --cta-to: #A67C2E;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    color: var(--text-body);
+    background: var(--warm-white);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Typography */
+.font-editorial {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Utility */
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.container-wide {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ─── HERO ─── */
+.hero {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 24px 60px;
+    position: relative;
+    background: var(--warm-white);
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, var(--gold));
+}
+
+.hero-logo {
+    width: 280px;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+    .hero-logo {
+        width: 380px;
+    }
+}
+
+.hero-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 6vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--petrol);
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+.hero-headline em {
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 600;
+}
+
+.hero-sub {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 540px;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+.hero-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--silver-dark);
+    border-left: 3px solid var(--gold);
+    padding-left: 20px;
+    margin: 32px 0 40px;
+    max-width: 480px;
+}
+
