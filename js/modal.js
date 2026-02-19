@@ -5,6 +5,26 @@
     const WEBHOOK_TOKEN = '0DFn6iuIVixXZyfVzU0sNawUYancFPZL';
     const CHECKOUT_BASE = 'https://pay.kirvano.com/9810a5f6-6966-4d78-93fa-7e213459999c';
 
+    // ═══════════════════════════════════════════════════════════
+    // TRACKING META PIXEL + CAPI
+    // ═══════════════════════════════════════════════════════════
+
+    /**
+     * Dispara evento Lead via Pixel + CAPI
+     * Usa o modulo MetaTracking do pixel.js
+     */
+    async function trackLeadEvent(nome, email, telefone) {
+        if (window.MetaTracking && typeof window.MetaTracking.trackLead === 'function') {
+            await window.MetaTracking.trackLead({
+                nome: nome,
+                email: email,
+                telefone: telefone
+            });
+        } else {
+            console.warn('[Modal] MetaTracking nao disponivel');
+        }
+    }
+
     const overlay = document.getElementById('leadModal');
     const form = document.getElementById('leadForm');
     const btnSubmit = form.querySelector('.modal-submit');
@@ -122,6 +142,12 @@
         url.searchParams.set('email', email);
         url.searchParams.set('phone', telefone);
 
+        // Adiciona UTMs + fbclid + fbp/fbc via MetaTracking
+        if (window.MetaTracking && typeof window.MetaTracking.addTrackingParams === 'function') {
+            return window.MetaTracking.addTrackingParams(url.toString());
+        }
+
+        // Fallback: adiciona apenas parametros da URL atual
         var urlParams = getUrlParams();
         Object.keys(urlParams).forEach(function (key) {
             url.searchParams.set(key, urlParams[key]);
@@ -131,7 +157,7 @@
     }
 
     // ─── Submit ───
-    form.addEventListener('submit', function (e) {
+    form.addEventListener('submit', async function (e) {
         e.preventDefault();
 
         var v1 = validateNome();
@@ -150,6 +176,9 @@
 
         var payload = { nome: nome, email: email, telefone: telefone };
         console.log('[Lead Modal] Enviando webhook…', payload);
+
+        // Dispara evento Lead via Pixel + CAPI
+        await trackLeadEvent(nome, email, telefone);
 
         fetch(WEBHOOK_URL, {
             method: 'POST',

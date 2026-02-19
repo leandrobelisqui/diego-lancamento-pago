@@ -6,7 +6,7 @@
 }
 
 .quote-section blockquote {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: clamp(1.2rem, 3vw, 1.6rem);
     font-style: italic;
     color: var(--petrol);
@@ -24,7 +24,7 @@
     top: -40px;
     left: -10px;
     line-height: 1;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .quote-section .quote-footer {
@@ -64,7 +64,7 @@
 }
 
 .bio-card h4 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--petrol);
@@ -78,7 +78,7 @@
 }
 
 .bio-together {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
     font-style: italic;
     font-size: 1rem;
     color: var(--silver-dark);

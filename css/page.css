@@ -50,18 +50,18 @@ body {
 
 /* Typography */
 .font-editorial {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Utility */
 .container {
-    max-width: 720px;
+    max-width: 840px;
     margin: 0 auto;
     padding: 0 24px;
 }
 
 .container-wide {
-    max-width: 960px;
+    max-width: 1080px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -101,7 +101,7 @@ body {
 }
 
 .hero-headline {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: clamp(2.2rem, 6vw, 4.2rem);
     font-weight: 700;
     line-height: 1.1;
@@ -124,8 +124,35 @@ body {
     font-weight: 400;
 }
 
+@media (min-width: 1024px) {
+    .hero-headline {
+        font-size: clamp(2.8rem, 5vw, 4.2rem);
+    }
+
+    .hero-sub {
+        font-size: 1.15rem;
+        max-width: 640px;
+    }
+
+    .hero-quote {
+        font-size: 1.15rem;
+        max-width: 560px;
+    }
+}
+
+/* ─── PROOF NUMBER HIGHLIGHT ─── */
+.proof-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
+    font-weight: 800;
+    color: var(--petrol);
+    background: linear-gradient(180deg, transparent 60%, rgba(197, 153, 58, 0.25) 60%);
+    padding: 0 4px;
+    white-space: nowrap;
+}
+
 .hero-quote {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
     font-style: italic;
     font-size: 1.1rem;
     color: var(--silver-dark);
