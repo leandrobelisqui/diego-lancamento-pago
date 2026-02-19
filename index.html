@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -8,668 +8,444 @@
     <meta name="description"
         content="Pare de depender de indicação. Em 1 dia, aprenda o sistema de prospecção, marketing e vendas que gerou mais de 250 milhões.">
 
-    <!-- Fonts: Playfair Display (Luxury/Authority) & DM Sans (Modern/Clean) -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-
-    <!-- Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: {
-                            800: '#1e293b', /* Slightly lighter for less harsh contrast */
-                            900: '#0f172a', /* Deep Authority Blue */
-                        },
-                        gold: {
-                            400: '#fbbf24',
-                            500: '#f59e0b',
-                            600: '#d97706',
-                        },
-                        action: {
-                            500: '#f97316', /* Orange - Impulse */
-                            600: '#ea580c',
-                            700: '#c2410c', /* Red-Orange - Urgency */
-                        },
-                        emerald: {
-                            50: '#ecfdf5',
-                            100: '#d1fae5',
-                            500: '#10b981',
-                            600: '#059669',
-                        }
-                    },
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['"DM Sans"', 'sans-serif'],
-                    },
-                    backgroundImage: {
-                        'hero-pattern': "url('https://www.transparenttextures.com/patterns/cubes.png')",
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'bounce-slight': 'bounce-slight 2s infinite',
-                    },
-                    keyframes: {
-                        'bounce-slight': {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-5px)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .gold-gradient {
-            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-        }
-
-        .action-gradient {
-            background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
-            /* Orange to Red */
-            box-shadow: 0 4px 14px 0 rgba(234, 88, 12, 0.39);
-        }
-
-        .text-gold-gradient {
-            background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-    </style>
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/modal.css">
 </head>
 
-<body class="font-sans text-slate-800 bg-slate-50 antialiased">
+<body>
 
-    <!-- SEÇÃO 1 — HEADLINE (HERO) -->
-    <header class="relative bg-navy-900 text-white pt-12 pb-20 overflow-hidden">
-        <!-- Background Elements -->
-        <div class="absolute inset-0 bg-hero-pattern opacity-10"></div>
-        <div
-            class="absolute top-0 right-0 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob">
-        </div>
-        <div
-            class="absolute -bottom-8 left-0 w-96 h-96 bg-emerald-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000">
-        </div>
+    <!-- ══════ HERO ══════ -->
+    <section class="hero">
+        <div class="container">
+            <img src="images/logo_sem_fundo.png" alt="Imersão Clínica 100K+" class="hero-logo">
 
-        <div class="container mx-auto px-4 relative z-10 max-w-4xl text-center">
-
-            <span
-                class="inline-block py-1 px-3 rounded-full bg-blue-900/50 border border-blue-700 text-blue-200 text-xs font-bold tracking-wider mb-6 uppercase">
-                Imersão Clínica 100K+
-            </span>
-
-            <h1 class="font-serif text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                Pare de depender de indicação e boca a boca.
-                <span class="block mt-2 text-gold-gradient">
-                    Em 1 dia, aprenda o sistema
-                </span>
-                de prospecção, marketing e vendas que gerou mais de 250 milhões no último ano.
+            <h1 class="hero-headline">
+                Pare de depender de<br>
+                <em>indicação e boca a boca.</em>
             </h1>
 
-            <!-- SEÇÃO 2 — SUBHEADLINE -->
-            <p class="text-lg md:text-xl text-slate-300 leading-relaxed mb-8 max-w-3xl mx-auto">
-                O plano prático de prospecção, posicionamento, marketing e vendas para sua clínica sair dos <strong
-                    class="text-white">R$30-50 mil</strong> e bater <strong class="text-white">R$100 mil por
-                    mês</strong> nos próximos 90 dias — mesmo que você não entenda nada de marketing digital.
+            <p class="hero-sub">
+                Em 1 dia, aprenda o sistema de <strong>prospecção, marketing e vendas</strong> que gerou mais de
+                <strong>250 milhões</strong> no último ano no Brasil e EUA.
             </p>
 
-            <!-- SEÇÃO 3 — TEXTO DE APOIO -->
-            <p class="text-slate-400 text-base mb-10 max-w-2xl mx-auto italic">
-                "Você é um excelente profissional de saúde. Mas ninguém te ensinou a atrair pacientes, vender
-                tratamentos caros e gerir uma clínica lucrativa. Até agora."
+            <p class="hero-sub" style="font-size: 0.92rem;">
+                O plano prático para sua clínica sair dos R$30-50 mil e bater R$100 mil por mês nos próximos 90 dias —
+                mesmo que você não entenda nada de marketing digital.
             </p>
 
-            <!-- SEÇÃO 4 — BOTÃO DE COMPRA 1 -->
-            <div class="flex flex-col items-center gap-4 relative">
-                <!-- Directional Cue -->
-                <div class="animate-bounce-slight text-action-500 mb-2">
-                    <span class="material-icons-round text-3xl">keyboard_double_arrow_down</span>
-                </div>
+            <blockquote class="hero-quote">
+                Você é um excelente profissional de saúde. Mas ninguém te ensinou a atrair pacientes, vender tratamentos
+                caros e gerir uma clínica lucrativa. Até agora.
+            </blockquote>
 
-                <a href="#checkout"
-                    class="action-gradient hover:brightness-110 text-white text-lg md:text-xl font-bold py-5 px-10 rounded-full shadow-lg transform hover:-translate-y-1 hover:shadow-orange-500/50 transition duration-300 w-full md:w-auto text-center flex items-center justify-center gap-2 animate-pulse-slow">
-                    QUERO PARTICIPAR DA IMERSÃO
-                    <span class="material-icons-round">arrow_forward</span>
-                </a>
+            <a href="#checkout" class="cta-btn">
+                Quero participar da imersão
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+            </a>
 
-                <!-- SEÇÃO 5 — TEXTO DE APOIO DO BOTÃO -->
-                <div class="text-center mt-2">
-                    <p class="text-slate-300 text-sm">
-                        De <span class="line-through decoration-red-500 decoration-2">R$497</span> por apenas <strong
-                            class="text-white text-lg">R$62</strong>
-                    </p>
-                    <p
-                        class="text-emerald-400 text-xs mt-1 flex items-center justify-center gap-1 font-medium bg-emerald-900/30 px-3 py-1 rounded-full border border-emerald-500/30">
-                        <span class="material-icons-round text-sm">verified_user</span>
-                        Garantia incondicional de 7 dias
-                    </p>
-                </div>
+            <div class="cta-meta">
+                <span class="price-old">R$497</span> por apenas <span class="price-new">R$62</span>
             </div>
-        </div>
-    </header>
-
-    <!-- SEÇÃO 6 — PROMESSA DO DESAFIO (PROBLEMA/SOLUÇÃO) -->
-    <section class="py-24 bg-white">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-
-                <!-- Coluna da Dor -->
-                <div class="order-2 md:order-1">
-                    <h3 class="font-serif text-3xl font-bold text-navy-900 mb-6 leading-tight">
-                        Sua clínica está presa entre <span class="text-red-600">R$30 e R$50 mil</span> por mês?
-                    </h3>
-                    <p class="text-slate-600 mb-4 text-justify leading-relaxed">
-                        Você trabalha 10, 12 horas por dia. Atende bem. Seus pacientes gostam de você. Mas no final do
-                        mês, o faturamento não reflete o seu esforço.
-                    </p>
-                    <p class="text-slate-600 mb-4 text-justify leading-relaxed">
-                        A agenda tem buracos. Pacientes desmarcam. Você depende de indicação. Quando para de vir
-                        indicação, bate o desespero.
-                    </p>
-                    <p class="text-slate-600 mb-6 text-justify leading-relaxed">
-                        Você já tentou postar no Instagram, contratar agência, fazer anúncio. Gastou dinheiro e não viu
-                        resultado. Começa a achar que "marketing não funciona pra clínica".
-                    </p>
-                    <!-- Highlight Box -->
-                    <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
-                        <p class="font-bold text-navy-800">
-                            A verdade? Marketing funciona. Você só nunca recebeu o método certo.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Coluna da Solução (Método) -->
-                <div class="order-1 md:order-2 relative">
-                    <!-- Placeholder Images mimicking authority figures -->
-                    <div
-                        class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition duration-500">
-                        <!-- REPLACE WITH REAL IMAGE OF DIEGO & SANAUÁ -->
-                        <img src="images/diego-sanaua-hero.jpg" alt="Médicos e Gestores Profissionais"
-                            class="w-full h-auto object-cover grayscale hover:grayscale-0 transition duration-500">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-                            <p class="text-white font-bold text-lg">Diego Peixoto & Dra. Sanauá Peixoto</p>
-                            <p class="text-gold-400 text-sm">Responsáveis por +250 milhões em resultados</p>
-                        </div>
-                    </div>
-                    <!-- Decorative Element -->
-                    <div class="absolute -top-6 -right-6 w-32 h-32 bg-gold-400/20 rounded-full blur-2xl -z-0"></div>
-                </div>
+            <div class="cta-meta" style="margin-top: 8px; font-size: 0.82rem; color: var(--gold-dark); font-weight: 600;">
+                Online &amp; ao vivo — 7 de março de 2026
             </div>
-
-            <!-- Método Details -->
-            <div class="mt-16 bg-navy-900 text-white rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
-                <div
-                    class="absolute top-0 right-0 w-64 h-64 bg-emerald-500 rounded-full mix-blend-overlay filter blur-3xl opacity-20">
-                </div>
-
-                <div class="relative z-10 text-center max-w-3xl mx-auto">
-                    <h3 class="font-serif text-2xl md:text-3xl font-bold mb-6">
-                        Na Imersão Clínica 100K+...
-                    </h3>
-                    <p class="text-slate-300 mb-8">
-                        Vamos te entregar em 1 dia o sistema completo de:
-                    </p>
-
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                        <div
-                            class="p-4 bg-navy-800 rounded-xl border border-navy-700 hover:border-gold-500 transition duration-300 group cursor-default">
-                            <span
-                                class="material-icons-round text-gold-400 text-3xl mb-2 group-hover:scale-110 transition">person_add</span>
-                            <h4 class="font-bold text-white mb-1">Prospecção</h4>
-                            <p class="text-xs text-slate-400">Atrair sem depender de indicação</p>
-                        </div>
-                        <div
-                            class="p-4 bg-navy-800 rounded-xl border border-navy-700 hover:border-gold-500 transition duration-300 group cursor-default">
-                            <span
-                                class="material-icons-round text-gold-400 text-3xl mb-2 group-hover:scale-110 transition">diamond</span>
-                            <h4 class="font-bold text-white mb-1">Posicionamento</h4>
-                            <p class="text-xs text-slate-400">Ser referência na região</p>
-                        </div>
-                        <div
-                            class="p-4 bg-navy-800 rounded-xl border border-navy-700 hover:border-gold-500 transition duration-300 group cursor-default">
-                            <span
-                                class="material-icons-round text-gold-400 text-3xl mb-2 group-hover:scale-110 transition">campaign</span>
-                            <h4 class="font-bold text-white mb-1">Marketing</h4>
-                            <p class="text-xs text-slate-400">Onde investir com retorno</p>
-                        </div>
-                        <div
-                            class="p-4 bg-navy-800 rounded-xl border border-navy-700 hover:border-gold-500 transition duration-300 group cursor-default">
-                            <span
-                                class="material-icons-round text-gold-400 text-3xl mb-2 group-hover:scale-110 transition">payments</span>
-                            <h4 class="font-bold text-white mb-1">Vendas</h4>
-                            <p class="text-xs text-slate-400">Fechar R$3k, 5k, 10k+</p>
-                        </div>
-                    </div>
-
-                    <p class="mt-8 text-sm text-slate-400">
-                        Diego muda sua visão de gestão. Dra. Sanauá (Harvard) traz a expertise clínica.
-                        O sistema que clínicas usam para sair dos 30-50k para 100k/mês.
-                    </p>
-                </div>
+            <div class="cta-guarantee">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                </svg>
+                Garantia incondicional de 7 dias
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO 7 — O QUE VOCÊ VAI APRENDER (Bullets) -->
-    <section class="py-24 bg-slate-50">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <div class="text-center mb-12">
-                <span class="text-blue-600 font-bold tracking-wider text-sm uppercase">Conteúdo Programático</span>
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-navy-900 mt-2">O que você vai dominar</h2>
-            </div>
+    <!-- ══════ PAIN / PROBLEM ══════ -->
+    <section class="pain-section">
+        <div class="container reveal">
+            <h2 class="pain-title">
+                Sua clínica está presa entre <span>R$30 e R$50 mil</span> por mês?
+            </h2>
 
-            <div class="grid gap-6">
-                <!-- Bullet Item -->
-                <div
-                    class="glass-card p-6 rounded-xl flex gap-4 items-start shadow-sm hover:shadow-md transition group">
-                    <div
-                        class="bg-blue-100 p-2 rounded-full text-blue-600 flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition">
-                        <span class="material-icons-round">check</span>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-navy-900 text-lg">Posicionamento e Direção Estratégica</h4>
-                        <ul class="mt-2 space-y-1 text-slate-600 text-sm">
-                            <li>• O ajuste que faz sua clínica parar de competir por preço.</li>
-                            <li>• Como definir seu ICP e parar de atrair curiosos.</li>
-                        </ul>
-                    </div>
-                </div>
+            <p class="pain-text">
+                Você trabalha 10, 12 horas por dia. Atende bem. Seus pacientes gostam de você. Mas no final do mês, o
+                faturamento não reflete o seu esforço.
+            </p>
 
-                <!-- Bullet Item -->
-                <div
-                    class="glass-card p-6 rounded-xl flex gap-4 items-start shadow-sm hover:shadow-md transition group">
-                    <div
-                        class="bg-blue-100 p-2 rounded-full text-blue-600 flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition">
-                        <span class="material-icons-round">check</span>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-navy-900 text-lg">Prospecção Inteligente</h4>
-                        <ul class="mt-2 space-y-1 text-slate-600 text-sm">
-                            <li>• Processo ativo para gerar pacientes toda semana.</li>
-                            <li>• Método de ativação de base parada (dinheiro na mesa).</li>
-                        </ul>
-                    </div>
-                </div>
+            <p class="pain-text">
+                A agenda tem buracos. Pacientes desmarcam. Você depende de indicação. Quando para de vir indicação, bate
+                o desespero.
+            </p>
 
-                <!-- Bullet Item -->
-                <div
-                    class="glass-card p-6 rounded-xl flex gap-4 items-start shadow-sm hover:shadow-md transition group">
-                    <div
-                        class="bg-blue-100 p-2 rounded-full text-blue-600 flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition">
-                        <span class="material-icons-round">check</span>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-navy-900 text-lg">Marketing com Foco em Resultado</h4>
-                        <ul class="mt-2 space-y-1 text-slate-600 text-sm">
-                            <li>• Onde investir sem "atirar para todo lado".</li>
-                            <li>• Estruturar campanhas simples que geram agendamento.</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Bullet Item -->
-                <div
-                    class="glass-card p-6 rounded-xl flex gap-4 items-start shadow-sm hover:shadow-md transition group">
-                    <div
-                        class="bg-blue-100 p-2 rounded-full text-blue-600 flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition">
-                        <span class="material-icons-round">check</span>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-navy-900 text-lg">Os Gargalos dos 30K-80K</h4>
-                        <ul class="mt-2 space-y-1 text-slate-600 text-sm">
-                            <li>• As 3 travas invisíveis que impedem o crescimento.</li>
-                            <li>• O que muda de 40k para 100k (não é equipamento).</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Bullet Item -->
-                <div
-                    class="glass-card p-6 rounded-xl flex gap-4 items-start shadow-sm hover:shadow-md transition group">
-                    <div
-                        class="bg-blue-100 p-2 rounded-full text-blue-600 flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition">
-                        <span class="material-icons-round">check</span>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-navy-900 text-lg">Vendas de Alto Nível</h4>
-                        <ul class="mt-2 space-y-1 text-slate-600 text-sm">
-                            <li>• Transformar "vou pensar" em decisão clara.</li>
-                            <li>• Organização do WhatsApp para aumentar conversão.</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Bullet Item -->
-                <div
-                    class="glass-card p-6 rounded-xl flex gap-4 items-start shadow-sm hover:shadow-md transition group">
-                    <div
-                        class="bg-blue-100 p-2 rounded-full text-blue-600 flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition">
-                        <span class="material-icons-round">check</span>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-navy-900 text-lg">Clareza Financeira</h4>
-                        <ul class="mt-2 space-y-1 text-slate-600 text-sm">
-                            <li>• Quanto investir para bater meta.</li>
-                            <li>• Modelo de acompanhamento para não perder dinheiro.</li>
-                        </ul>
-                    </div>
-                </div>
+            <p class="pain-text">
+                Você já tentou postar no Instagram, contratar agência, fazer anúncio. Gastou dinheiro e não viu
+                resultado. Começa a achar que "marketing não funciona pra clínica".
+            </p>
 
+            <div class="pain-highlight">
+                <p>A verdade? Marketing funciona. Você só nunca recebeu o método certo.</p>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO 11 — GARANTIA -->
-    <section class="py-16 bg-emerald-50 border-y border-emerald-100">
-        <div class="container mx-auto px-4 max-w-3xl text-center">
-            <div
-                class="w-20 h-20 bg-white text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-md border-2 border-emerald-100">
-                <span class="material-icons-round text-4xl">verified_user</span>
+    <!-- ══════ METHOD GRID ══════ -->
+    <section class="method-section">
+        <div class="container-wide reveal">
+            <div class="method-photo-frame">
+                <img src="images/diego_e_sanaua.jpg" alt="Diego Peixoto e Dra. Sanauá Peixoto">
+                <p class="method-photo-caption">Diego Peixoto &amp; Dra. Sanauá Peixoto</p>
             </div>
-            <h3 class="font-serif text-2xl font-bold text-navy-900 mb-4">Garantia Total de 7 Dias</h3>
-            <p class="text-slate-600 leading-relaxed mb-6 font-medium">
+            <div class="section-label">Na Imersão Clínica 100K+</div>
+            <p style="font-size: 0.95rem; color: var(--text-muted); max-width:540px; margin-bottom: 8px;">
+                Diego Peixoto e Dra. Sanauá Peixoto — responsáveis por mais de 250 milhões em resultados — vão te
+                entregar em 1 dia o sistema completo de:
+            </p>
+
+            <div class="method-grid">
+                <div class="method-cell">
+                    <span class="method-number">01</span>
+                    <h4>Prospecção</h4>
+                    <p>Como atrair pacientes toda semana sem depender de indicação.</p>
+                </div>
+                <div class="method-cell">
+                    <span class="method-number">02</span>
+                    <h4>Posicionamento</h4>
+                    <p>Como se tornar a referência da sua região, mesmo sem ser o mais barato.</p>
+                </div>
+                <div class="method-cell">
+                    <span class="method-number">03</span>
+                    <h4>Marketing</h4>
+                    <p>Onde investir cada real para ter o maior retorno — sem agência genérica.</p>
+                </div>
+                <div class="method-cell">
+                    <span class="method-number">04</span>
+                    <h4>Vendas</h4>
+                    <p>Como vender tratamentos de R$3.000, R$5.000 e R$10.000 com naturalidade.</p>
+                </div>
+            </div>
+
+            <p style="font-size: 0.82rem; color: var(--text-light); margin-top: 24px; text-align: center;">
+                Diego traz gestão, vendas e escala. Dra. Sanauá (Harvard) traz a expertise clínica.
+            </p>
+        </div>
+    </section>
+
+    <!-- ══════ BULLETS DETALHADOS ══════ -->
+    <section class="bullets-section">
+        <div class="container reveal">
+            <div class="section-label">Conteúdo Programático</div>
+            <h2 class="section-title">O que você vai dominar</h2>
+
+            <div class="bullet-group">
+                <h4>Posicionamento e Direção Estratégica</h4>
+                <ul>
+                    <li>O ajuste de posicionamento que faz sua clínica parar de competir por preço — mesmo na sua
+                        própria cidade</li>
+                    <li>Como definir seu ICP (Paciente Ideal de Crescimento) e parar de atrair curiosos que só pedem
+                        orçamento</li>
+                </ul>
+            </div>
+
+            <div class="bullet-group">
+                <h4>Prospecção Inteligente</h4>
+                <ul>
+                    <li>O processo de prospecção ativa que pode gerar pacientes toda semana — mesmo que seu Instagram
+                        esteja pequeno</li>
+                    <li>O método de ativação de base parada (ex-pacientes e orçamentos esquecidos) que muitas clínicas
+                        ignoram</li>
+                </ul>
+            </div>
+
+            <div class="bullet-group">
+                <h4>Marketing com Foco em Resultado</h4>
+                <ul>
+                    <li>Como decidir onde investir seu dinheiro de marketing sem "atirar para todo lado"</li>
+                    <li>Como estruturar campanhas simples que geram agendamento — mesmo com orçamento pequeno</li>
+                </ul>
+            </div>
+
+            <div class="bullet-group">
+                <h4>Os Gargalos que Travam Clínicas entre 30K e 80K</h4>
+                <ul>
+                    <li>As 3 travas invisíveis que impedem sua clínica de crescer — mesmo com bom procedimento técnico
+                    </li>
+                    <li>O que realmente muda quando uma clínica sai de 40k para 100k — não é equipamento novo</li>
+                </ul>
+            </div>
+
+            <div class="bullet-group">
+                <h4>Vendas de Alto Nível</h4>
+                <ul>
+                    <li>A estrutura de atendimento que transforma "vou pensar" em decisão clara — sem pressão e sem
+                        manipulação</li>
+                    <li>A organização do WhatsApp comercial para aumentar conversão de orçamento em agendamento</li>
+                </ul>
+            </div>
+
+            <div class="bullet-group">
+                <h4>Clareza Financeira e Controle</h4>
+                <ul>
+                    <li>Como saber exatamente quanto você precisa investir para bater sua meta de faturamento</li>
+                    <li>O modelo simples de acompanhamento semanal que usamos para não perder dinheiro escondido</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════ GARANTIA ══════ -->
+    <section class="guarantee-section">
+        <div class="container reveal">
+            <div class="guarantee-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                </svg>
+            </div>
+            <h3>Garantia Total de 7 Dias</h3>
+            <p>
                 Participe da imersão completa. Se por qualquer motivo você sentir que o conteúdo não vale pelo menos 10
                 vezes o valor investido, basta enviar um e-mail em até 7 dias e devolvemos 100% do seu dinheiro. Sem
                 perguntas, sem burocracia.
             </p>
-            <p class="font-bold text-emerald-800 bg-emerald-100/50 py-2 px-4 rounded-lg inline-block">
-                Quem confia no que entrega não tem medo de oferecer garantia.
-            </p>
+            <p class="guarantee-bold">Quem confia no que entrega não tem medo de oferecer garantia.</p>
         </div>
     </section>
 
-    <!-- SEÇÃO 12 — OFERTA FINAL (CTA 2) -->
-    <section id="checkout" class="py-24 bg-navy-900 text-white relative overflow-hidden">
-        <div
-            class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] opacity-30">
-        </div>
+    <!-- ══════ OFERTA FINAL ══════ -->
+    <section class="offer-section" id="checkout">
+        <div class="container reveal">
+            <h2 class="offer-title">SIM, QUERO O SISTEMA DE 250 MILHÕES</h2>
+            <p class="offer-subtitle">Imersão com Diego e Dra. Sanauá Peixoto — gestão + clínica no mesmo dia.</p>
 
-        <div class="container mx-auto px-4 relative z-10 max-w-4xl">
-            <div
-                class="bg-white/10 backdrop-blur-lg border border-white/10 rounded-3xl p-8 md:p-12 text-center shadow-2xl">
+            <div class="offer-price-block">
+                <div class="offer-price-old">De R$497</div>
+                <div class="offer-price"><sup>R$</sup>62</div>
+                <p style="color: rgba(255,255,255,0.4); font-size: 0.85rem; margin-top: 8px;">Pagamento único via Cartão
+                    ou PIX</p>
+            </div>
 
-                <h2 class="font-serif text-3xl md:text-5xl font-bold mb-2">
-                    SIM, QUERO O SISTEMA DE 250 MILHÕES
-                </h2>
-                <div class="text-emerald-400 text-xl font-bold mb-8">POR APENAS <span
-                        class="text-4xl text-emerald-400">R$62</span></div>
+            <a href="#" class="cta-btn" style="font-size: 1.05rem; padding: 20px 48px;">
+                Garantir minha vaga agora
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+            </a>
 
-                <p class="text-slate-300 mb-8 max-w-2xl mx-auto">
-                    Imersão com Diego e Dra. Sanauá Peixoto — gestão + clínica no mesmo dia.
-                    <br>Vagas limitadas para esta imersão. Garanta a sua agora.
-                </p>
-
-                <div class="flex flex-col items-center gap-4">
-                    <!-- Directional Cue -->
-                    <div class="animate-bounce-slight text-action-500">
-                        <span class="material-icons-round text-3xl">keyboard_double_arrow_down</span>
-                    </div>
-
-                    <a href="#"
-                        class="action-gradient hover:brightness-110 text-white text-xl md:text-2xl font-bold py-6 px-12 rounded-full shadow-2xl shadow-orange-500/40 transform hover:scale-105 transition duration-300 inline-block w-full md:w-auto animate-pulse-slow">
-                        GARANTIR MINHA VAGA AGORA
-                    </a>
-                </div>
-
-                <div
-                    class="mt-8 pt-8 border-t border-white/10 flex flex-wrap justify-center gap-6 text-sm text-slate-400">
-                    <span class="flex items-center gap-2"><span
-                            class="material-icons-round text-emerald-500">check_circle</span> Acesso imediato</span>
-                    <span class="flex items-center gap-2"><span
-                            class="material-icons-round text-emerald-500">check_circle</span> Pagamento seguro</span>
-                    <span class="flex items-center gap-2"><span
-                            class="material-icons-round text-emerald-500">check_circle</span> Satisfação
-                        garantida</span>
-                </div>
+            <div class="offer-trust-row">
+                <span class="offer-trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                    </svg>
+                    Online &amp; ao vivo — 7 de março de 2026
+                </span>
+                <span class="offer-trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                    </svg>
+                    Pagamento seguro
+                </span>
+                <span class="offer-trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                    </svg>
+                    Satisfação garantida
+                </span>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO 13 — FRASE PERSUASIVA -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4 max-w-3xl text-center">
-            <blockquote class="font-serif text-xl md:text-2xl italic text-slate-700 leading-relaxed relative">
-                <span
-                    class="absolute top-0 left-0 transform -translate-x-4 -translate-y-4 text-6xl text-slate-200 font-serif opacity-50">"</span>
-                Daqui a 90 dias, sua clínica pode estar faturando R$100 mil por mês com agenda lotada e pacientes que
+    <!-- ══════ FRASE PERSUASIVA ══════ -->
+    <section class="quote-section">
+        <div class="container reveal">
+            <blockquote>
+                Daqui a 90 dias, sua clínica pode estar faturando R$100 mil ou mais por mês com agenda lotada e pacientes que
                 pagam o preço cheio. Ou pode estar exatamente onde está agora — dependendo de indicação, apagando
                 incêndio e trabalhando 12 horas por dia.
             </blockquote>
-            <p class="mt-8 font-bold text-navy-900 border-t border-slate-200 inline-block pt-6">
-                A diferença entre os dois cenários custa R$62 e começa neste sábado.
-            </p>
+            <p class="quote-footer">A diferença entre os dois cenários custa R$62 e acontece online e ao vivo no dia 7 de março.</p>
         </div>
     </section>
 
-    <!-- SEÇÃO 14 — BIO DO EXPERT -->
-    <section class="py-20 bg-slate-50 border-t border-slate-200">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <h2 class="font-serif text-3xl font-bold text-center text-navy-900 mb-12">Quem são seus mentores</h2>
+    <!-- ══════ BIO ══════ -->
+    <section class="bio-section">
+        <div class="container reveal">
+            <div class="section-label">Seus Mentores</div>
+            <h2 class="section-title" style="margin-bottom: 40px;">Quem são Diego e Dra. Sanauá Peixoto</h2>
 
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Diego -->
-                <div class="flex flex-col md:flex-row gap-6 items-start">
-                    <img src="images/diego-profile.jpg" alt="Diego Peixoto"
-                        class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-lg border-2 border-gold-500 flex-shrink-0">
-                    <div>
-                        <h3 class="font-bold text-xl text-navy-900 mb-2">Diego Peixoto</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed text-justify">
-                            Empreendedor e mentor especialista em transformar clínicas e consultórios em negócios
-                            autogerenciáveis. Com mais de 250 milhões gerados em resultados no último ano e 250
-                            mentorados no Brasil e nos EUA, é referência em atração de clientes, aumento de vendas e
-                            gestão escalável. CEO da DS GROUP e do Instituto Sanauá Peixoto.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Sanauá -->
-                <div class="flex flex-col md:flex-row gap-6 items-start">
-                    <img src="images/sanaua-profile.jpg" alt="Dra. Sanauá Peixoto"
-                        class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-lg border-2 border-gold-500 flex-shrink-0">
-                    <div>
-                        <h3 class="font-bold text-xl text-navy-900 mb-2">Dra. Sanauá Peixoto</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed text-justify">
-                            Biomédica Esteta, mentora de mais de 200 profissionais. Certificada pela Harvard University
-                            e com residência na Itália, é a idealizadora do Método HN, referência em harmonização facial
-                            e corporal. CEO do Instituto Sanauá Peixoto, líder em inovação estética.
-                        </p>
-                    </div>
+            <div class="bio-card">
+                <img src="images/diego.jpg" alt="Diego Peixoto" class="bio-photo">
+                <div>
+                    <h4>Diego Peixoto</h4>
+                    <p>Empreendedor e mentor especialista em transformar clínicas e consultórios em negócios
+                        autogerenciáveis. Com mais de 250 milhões gerados em resultados no último ano e 250 mentorados
+                        no Brasil e nos EUA, é referência em atração de clientes, aumento de vendas e gestão escalável.
+                        CEO da DS GROUP e do Instituto Sanauá Peixoto.</p>
                 </div>
             </div>
 
-            <p class="text-center mt-12 text-slate-500 italic max-w-2xl mx-auto">
+            <div class="bio-card">
+                <img src="images/sanaua.jpg" alt="Dra. Sanauá Peixoto" class="bio-photo">
+                <div>
+                    <h4>Dra. Sanauá Peixoto</h4>
+                    <p>Biomédica Esteta, mentora de mais de 200 profissionais, incluindo harmonizadores e gestores de
+                        clínicas. Certificada pela Harvard University e com residência na Itália, é a idealizadora do
+                        Método HN, referência em harmonização facial e corporal com resultados naturais e
+                        personalizados. CEO do Instituto Sanauá Peixoto, líder em inovação estética.</p>
+                </div>
+            </div>
+
+            <p class="bio-together">
                 "Juntos, Diego e Sanauá unem visão empresarial e expertise clínica para entregar o método mais completo
                 de crescimento para clínicas de saúde e bem-estar do Brasil."
             </p>
         </div>
     </section>
 
-    <!-- SEÇÃO 15 — FAQ -->
-    <section class="py-20 bg-white border-t border-slate-200" id="faq">
-        <div class="container mx-auto px-4 max-w-3xl">
-            <h2 class="font-serif text-3xl font-bold text-center text-navy-900 mb-12">Perguntas Frequentes</h2>
+    <!-- ══════ FAQ ══════ -->
+    <section class="faq-section">
+        <div class="container reveal">
+            <div class="section-label">Dúvidas</div>
+            <h2 class="section-title">Perguntas Frequentes</h2>
 
-            <div class="space-y-4">
-                <!-- FAQ Item 1 -->
-                <details
-                    class="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition-all duration-300">
-                    <summary
-                        class="flex cursor-pointer items-center justify-between p-6 text-navy-900 font-bold hover:bg-slate-100">
-                        Para quem é esta imersão?
-                        <span
-                            class="transition group-open:rotate-180 material-icons-round text-slate-400">expand_more</span>
-                    </summary>
-                    <div class="p-6 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-100 mt-2">
-                        Para gestores e donos de clínicas de saúde, bem-estar, estética e harmonização que faturam entre
-                        R$30 mil e R$50 mil por mês e querem escalar para R$100 mil ou mais. Se você tem pelo menos 1
-                        colaborador e sente que sua clínica pode render mais, esta imersão é para você.
-                    </div>
-                </details>
+            <details class="faq-item">
+                <summary>Para quem é esta imersão?</summary>
+                <div class="faq-answer">Para gestores e donos de clínicas de saúde, bem-estar, estética e harmonização
+                    que faturam entre R$30 mil e R$50 mil por mês e querem escalar para R$100 mil ou mais. Se você tem
+                    pelo menos 1 colaborador e sente que sua clínica pode render mais, esta imersão é para você.</div>
+            </details>
 
-                <!-- FAQ Item 2 -->
-                <details
-                    class="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition-all duration-300">
-                    <summary
-                        class="flex cursor-pointer items-center justify-between p-6 text-navy-900 font-bold hover:bg-slate-100">
-                        Preciso entender de marketing digital?
-                        <span
-                            class="transition group-open:rotate-180 material-icons-round text-slate-400">expand_more</span>
-                    </summary>
-                    <div class="p-6 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-100 mt-2">
-                        Não. O método foi desenhado para profissionais de saúde que são excelentes clinicamente mas
-                        nunca aprenderam a parte de gestão, marketing e vendas. Tudo é explicado de forma prática e
-                        aplicável.
-                    </div>
-                </details>
+            <details class="faq-item">
+                <summary>Preciso entender de marketing digital?</summary>
+                <div class="faq-answer">Não. O método foi desenhado para profissionais de saúde que são excelentes
+                    clinicamente mas nunca aprenderam a parte de gestão, marketing e vendas. Tudo é explicado de forma
+                    prática e aplicável.</div>
+            </details>
 
-                <!-- FAQ Item 3 -->
-                <details
-                    class="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition-all duration-300">
-                    <summary
-                        class="flex cursor-pointer items-center justify-between p-6 text-navy-900 font-bold hover:bg-slate-100">
-                        Quanto tempo dura a imersão?
-                        <span
-                            class="transition group-open:rotate-180 material-icons-round text-slate-400">expand_more</span>
-                    </summary>
-                    <div class="p-6 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-100 mt-2">
-                        É uma imersão intensiva de 1 dia (manhã e tarde) ao vivo no Zoom. Você sai no mesmo dia com o
-                        plano de ação completo para os próximos 90 dias.
-                    </div>
-                </details>
+            <details class="faq-item">
+                <summary>Quanto tempo dura a imersão?</summary>
+                <div class="faq-answer">É uma imersão intensiva de 1 dia (manhã e tarde) ao vivo no Zoom. Você sai no
+                    mesmo dia com o plano de ação completo para os próximos 90 dias.</div>
+            </details>
 
-                <!-- FAQ Item 4 -->
-                <details
-                    class="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition-all duration-300">
-                    <summary
-                        class="flex cursor-pointer items-center justify-between p-6 text-navy-900 font-bold hover:bg-slate-100">
-                        E se eu não puder participar ao vivo?
-                        <span
-                            class="transition group-open:rotate-180 material-icons-round text-slate-400">expand_more</span>
-                    </summary>
-                    <div class="p-6 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-100 mt-2">
-                        No checkout, você pode adicionar o acesso à gravação por 30 dias como order bump. Mas
-                        recomendamos fortemente a participação ao vivo — a experiência e o resultado são
-                        significativamente melhores.
-                    </div>
-                </details>
+            <details class="faq-item">
+                <summary>E se eu não puder participar ao vivo?</summary>
+                <div class="faq-answer">No checkout, você poderá adicionar o acesso à gravação por 30 dias. Mas recomendamos fortemente a participação ao vivo — a experiência e o resultado são
+                    significativamente melhores.</div>
+            </details>
 
-                <!-- FAQ Item 5 -->
-                <details
-                    class="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition-all duration-300">
-                    <summary
-                        class="flex cursor-pointer items-center justify-between p-6 text-navy-900 font-bold hover:bg-slate-100">
-                        Tem garantia?
-                        <span
-                            class="transition group-open:rotate-180 material-icons-round text-slate-400">expand_more</span>
-                    </summary>
-                    <div class="p-6 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-100 mt-2">
-                        Sim. Garantia incondicional de 7 dias. Se não gostar, devolvemos 100% do valor. Sem perguntas.
-                    </div>
-                </details>
+            <details class="faq-item">
+                <summary>Tem garantia?</summary>
+                <div class="faq-answer">Sim. Garantia incondicional de 7 dias. Se não gostar, devolvemos 100% do valor.
+                    Sem perguntas.</div>
+            </details>
 
-                <!-- FAQ Item 6 -->
-                <details
-                    class="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition-all duration-300">
-                    <summary
-                        class="flex cursor-pointer items-center justify-between p-6 text-navy-900 font-bold hover:bg-slate-100">
-                        Como funciona o acesso?
-                        <span
-                            class="transition group-open:rotate-180 material-icons-round text-slate-400">expand_more</span>
-                    </summary>
-                    <div class="p-6 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-100 mt-2">
-                        Após a compra, você receberá um e-mail com todas as instruções de acesso, horários e o que
-                        preparar para o dia do treinamento.
-                    </div>
-                </details>
+            <details class="faq-item">
+                <summary>Como funciona o acesso?</summary>
+                <div class="faq-answer">Após a compra, você receberá um e-mail com todas as instruções de acesso,
+                    horários e o que preparar para o dia do treinamento.</div>
+            </details>
 
-                <!-- FAQ Item 7 -->
-                <details
-                    class="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition-all duration-300">
-                    <summary
-                        class="flex cursor-pointer items-center justify-between p-6 text-navy-900 font-bold hover:bg-slate-100">
-                        R$62 não é muito barato para uma imersão assim?
-                        <span
-                            class="transition group-open:rotate-180 material-icons-round text-slate-400">expand_more</span>
-                    </summary>
-                    <div class="p-6 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-100 mt-2">
-                        O Diego acredita que o preço não pode ser barreira para quem quer transformar sua clínica. O
-                        valor do ingresso é acessível justamente para selecionar pessoas comprometidas. Quem paga,
-                        presta atenção — e quem presta atenção, transforma.
-                    </div>
-                </details>
+            <details class="faq-item">
+                <summary>R$62 não é muito barato para uma imersão assim?</summary>
+                <div class="faq-answer">O Diego acredita que o preço não pode ser barreira para quem quer transformar
+                    sua clínica. O valor do ingresso é acessível justamente para selecionar pessoas comprometidas. Quem
+                    paga, presta atenção — e quem presta atenção, transforma.</div>
+            </details>
 
-                <!-- FAQ Item 8 -->
-                <details
-                    class="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition-all duration-300">
-                    <summary
-                        class="flex cursor-pointer items-center justify-between p-6 text-navy-900 font-bold hover:bg-slate-100">
-                        Funciona para minha especialidade?
-                        <span
-                            class="transition group-open:rotate-180 material-icons-round text-slate-400">expand_more</span>
-                    </summary>
-                    <div class="p-6 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-100 mt-2">
-                        O método já foi aplicado em clínicas de dentistas, fisioterapeutas, esteticistas, biomédicos,
-                        harmonizadores, nutricionistas e diversas especialidades de saúde e bem-estar. A própria Dra.
-                        Sanauá é biomédica esteta e aplica o método na sua clínica. O foco é gestão, marketing e vendas
-                        — funciona para qualquer especialidade.
-                    </div>
-                </details>
+            <details class="faq-item">
+                <summary>Funciona para minha especialidade?</summary>
+                <div class="faq-answer">O método já foi aplicado em clínicas de dentistas, fisioterapeutas,
+                    esteticistas, biomédicos, harmonizadores, nutricionistas e diversas especialidades de saúde e
+                    bem-estar. A própria Dra. Sanauá é biomédica esteta e aplica o método na sua clínica. O foco é
+                    gestão, marketing e vendas — funciona para qualquer especialidade.</div>
+            </details>
 
-                <!-- FAQ Item 9 -->
-                <details
-                    class="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition-all duration-300">
-                    <summary
-                        class="flex cursor-pointer items-center justify-between p-6 text-navy-900 font-bold hover:bg-slate-100">
-                        Quem são os dois experts?
-                        <span
-                            class="transition group-open:rotate-180 material-icons-round text-slate-400">expand_more</span>
-                    </summary>
-                    <div class="p-6 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-100 mt-2">
-                        Diego Peixoto é o especialista em gestão, vendas e escala de clínicas (+250 milhões gerados no
-                        último ano, 250 mentorados). Dra. Sanauá Peixoto é biomédica esteta, certificada Harvard, com
-                        200+ profissionais mentorados e idealizadora do Método HN. Juntos, entregam a visão completa:
-                        negócios + clínica.
-                    </div>
-                </details>
-            </div>
+            <details class="faq-item">
+                <summary>Quem são os dois experts?</summary>
+                <div class="faq-answer">Diego Peixoto é o especialista em gestão, vendas e escala de clínicas (+250
+                    milhões gerados no último ano, 250 mentorados). Dra. Sanauá Peixoto é biomédica esteta, certificada
+                    Harvard, com 200+ profissionais mentorados e idealizadora do Método HN. Juntos, entregam a visão
+                    completa: negócios + clínica.</div>
+            </details>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-navy-900 text-slate-400 py-12 border-t border-navy-800 text-center text-xs">
-        <div class="container mx-auto px-4">
-            <p class="mb-2">© 2026 Peixoto Mentoria Médica. Todos os direitos reservados.</p>
-            <p>CNPJ: 00.000.000/0001-00</p>
-            <p class="mt-4 opacity-50">Este site não faz parte do Google ou Facebook.</p>
-        </div>
+    <!-- ══════ FOOTER ══════ -->
+    <footer class="footer">
+        <p>2026 – Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Fixed Bottom Bar Mobile -->
-    <div
-        class="fixed bottom-0 left-0 right-0 p-4 bg-white/95 backdrop-blur shadow-[0_-5px_20px_rgba(0,0,0,0.1)] md:hidden z-50 border-t border-slate-200">
-        <div class="flex items-center justify-between max-w-sm mx-auto gap-4">
-            <div>
-                <p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Acesso Imediato</p>
-                <p class="text-2xl font-black text-navy-900 leading-none">R$62</p>
+    <!-- ══════ STICKY MOBILE BAR ══════ -->
+    <div class="mobile-bar">
+        <div class="bar-price">
+            <span class="old">R$497</span>
+            <span class="new">R$62</span>
+        </div>
+        <a href="#checkout" class="bar-cta">Garantir vaga</a>
+    </div>
+
+    <!-- ══════ MODAL LEAD CAPTURE ══════ -->
+    <div class="modal-overlay" id="leadModal">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Fechar">&times;</button>
+            <h3 class="modal-title">Garanta sua vaga</h3>
+            <p class="modal-subtitle">Preencha seus dados para ir ao checkout seguro.</p>
+            <form id="leadForm" class="modal-form" novalidate>
+                <div class="modal-field">
+                    <label for="leadNome">Nome completo</label>
+                    <input type="text" id="leadNome" placeholder="Seu nome completo" autocomplete="name" required>
+                    <span class="field-error"></span>
+                </div>
+                <div class="modal-field">
+                    <label for="leadEmail">E-mail</label>
+                    <input type="email" id="leadEmail" placeholder="seu@email.com" autocomplete="email" required>
+                    <span class="field-error"></span>
+                </div>
+                <div class="modal-field">
+                    <label for="leadTel">WhatsApp (celular)</label>
+                    <input type="tel" id="leadTel" placeholder="(11) 99999-9999" autocomplete="tel" required>
+                    <span class="field-error"></span>
+                </div>
+                <button type="submit" class="modal-submit">
+                    <span class="btn-text">Ir para o checkout seguro</span>
+                    <span class="spinner"></span>
+                </button>
+            </form>
+            <div class="modal-trust">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                </svg>
+                Seus dados estão protegidos
             </div>
-            <a href="#checkout"
-                class="action-gradient text-white font-bold py-3 px-6 rounded-full text-sm shadow-lg shadow-orange-500/30 active:scale-95 transition flex-1 text-center">
-                GARANTIR VAGA
-            </a>
         </div>
     </div>
+
+    <!-- ══════ REVEAL ON SCROLL ══════ -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+    <script src="js/modal.js"></script>
 
 </body>
 
