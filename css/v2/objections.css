@@ -1,0 +1,128 @@
+/* ─── SEÇÃO 12: ÚLTIMAS DÚVIDAS (OBJEÇÕES) ─── */
+.v2-objections {
+    padding: var(--section-py) 0;
+    background: var(--bg-surface);
+    position: relative;
+}
+
+.v2-objections-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.v2-objections-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.v2-objections-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px; height: 1px;
+    background: var(--gold);
+}
+
+.v2-objections-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.7rem, 4vw, 2.6rem);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 56px;
+    line-height: 1.25;
+    max-width: 680px;
+}
+
+.v2-objection-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--border);
+}
+
+.v2-objection-item {
+    background: var(--bg-card);
+    padding: 32px 28px;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.2s ease;
+    position: relative;
+}
+
+.v2-objection-item:last-child { border-bottom: none; }
+.v2-objection-item:hover { background: var(--bg-card-hover); }
+
+.v2-objection-item::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 2px;
+    background: transparent;
+    transition: background 0.2s ease;
+}
+
+.v2-objection-item:hover::before { background: var(--gold); }
+
+@media (hover: none) {
+    .v2-objection-item::before { background: var(--gold-border); }
+}
+
+.v2-objection-header {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.v2-objection-icon {
+    width: 36px; height: 36px;
+    border: 1px solid var(--gold-border);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.v2-objection-icon svg {
+    width: 18px; height: 18px;
+    color: var(--gold);
+}
+
+.v2-objection-question {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.45;
+    padding-top: 6px;
+}
+
+.v2-objection-answer {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.85;
+    padding-left: 52px;
+}
+
+@media (max-width: 480px) {
+    .v2-objection-item { padding: 24px 16px; }
+    .v2-objection-answer { padding-left: 0; margin-top: 12px; font-size: 0.88rem; }
+    .v2-objection-header { gap: 12px; }
+    .v2-objection-icon { width: 32px; height: 32px; flex-shrink: 0; }
+    .v2-objection-icon svg { width: 16px; height: 16px; }
+}
+
+.v2-objection-answer strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) { .v2-objections-inner { padding: 0 20px; } }
+@media (max-width: 480px) { .v2-objections-inner { padding: 0 16px; } }
+

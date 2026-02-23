@@ -1,0 +1,115 @@
+/* ─── SEÇÃO 4: PARA QUEM É ─── */
+.v2-audience {
+    padding: var(--section-py) 0;
+    background: var(--bg-surface);
+    position: relative;
+}
+
+.v2-audience-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.v2-audience-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 56px;
+}
+
+.v2-audience-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+}
+
+.v2-audience-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px; height: 1px;
+    background: var(--gold);
+}
+
+.v2-audience-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 400;
+    color: var(--text-primary);
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+
+.v2-audience-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+    background: var(--border);
+    border: 1px solid var(--border);
+}
+
+.v2-audience-card {
+    background: var(--bg-card);
+    padding: 36px 32px;
+    transition: background 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.v2-audience-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.v2-audience-card:hover { background: var(--bg-card-hover); }
+.v2-audience-card:hover::before { transform: scaleX(1); }
+
+/* Touch devices: show accent bar statically, no hover needed */
+@media (hover: none) {
+    .v2-audience-card::before { transform: scaleX(1); }
+    .v2-audience-card { background: var(--bg-card); }
+}
+
+.v2-audience-icon {
+    width: 44px; height: 44px;
+    border: 1px solid var(--gold-border);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.v2-audience-icon svg { width: 22px; height: 22px; color: var(--gold); }
+
+.v2-audience-card h4 {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.v2-audience-card p {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+}
+
+@media (min-width: 640px) { .v2-audience-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 960px) { .v2-audience-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px) { .v2-audience-inner { padding: 0 20px; } }
+@media (max-width: 480px) { .v2-audience-inner { padding: 0 16px; } }

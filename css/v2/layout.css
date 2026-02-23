@@ -1,0 +1,111 @@
+/* ─── FOOTER ─── */
+.v2-footer {
+    background: var(--bg-mid);
+    color: var(--text-muted);
+    text-align: center;
+    padding: 40px 24px;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--border);
+    line-height: 1.8;
+}
+
+/* ─── STICKY MOBILE BAR ─── */
+.v2-mobile-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: rgba(7, 16, 24, 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 12px 20px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    border-top: 1px solid var(--gold-border);
+    gap: 16px;
+}
+
+@media (max-width: 900px) {
+    .v2-mobile-bar { display: flex; }
+    body { padding-bottom: 76px; }
+}
+
+.v2-mobile-bar .bar-price { color: var(--text-primary); flex-shrink: 0; }
+
+.v2-mobile-bar .bar-price .old {
+    font-size: 0.66rem;
+    text-decoration: line-through;
+    color: var(--text-muted);
+    display: block;
+    line-height: 1;
+}
+
+.v2-mobile-bar .bar-price .new {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: var(--gold-light);
+    line-height: 1;
+    letter-spacing: 0.04em;
+}
+
+.v2-mobile-bar .bar-cta {
+    flex: 1;
+    text-align: center;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 14px 20px;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    box-shadow: 0 4px 20px rgba(201,168,76,0.35);
+}
+
+/* ─── REVEAL ANIMATION ─── */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ─── STAGGER DELAYS ─── */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ─── INTERMEDIATE CTA BLOCK ─── */
+.v2-mid-cta {
+    padding: var(--section-py) 0;
+    background: var(--bg-surface);
+    text-align: center;
+}
+
+.v2-mid-cta-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.v2-mid-cta p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 28px;
+    line-height: 1.75;
+}
+
+@media (max-width: 480px) {
+    .v2-mid-cta-inner { padding: 0 16px; }
+}

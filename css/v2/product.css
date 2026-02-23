@@ -1,0 +1,124 @@
+/* ─── SEÇÃO 8: DETALHAMENTO DO PRODUTO ─── */
+.v2-product {
+    padding: var(--section-py) 0;
+    background: var(--bg-surface);
+    position: relative;
+}
+
+.v2-product-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.v2-product-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 56px;
+}
+
+.v2-product-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+}
+
+.v2-product-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px; height: 1px;
+    background: var(--gold);
+}
+
+.v2-product-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    font-weight: 400;
+    color: var(--text-primary);
+    letter-spacing: 0.03em;
+    line-height: 1;
+}
+
+.v2-product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+    background: var(--border);
+    border: 1px solid var(--border);
+}
+
+.v2-product-step {
+    background: var(--bg-card);
+    padding: 40px 32px;
+    position: relative;
+    transition: background 0.2s ease;
+}
+
+.v2-product-step:hover { background: var(--bg-card-hover); }
+.v2-product-step:hover .v2-product-step-number { opacity: 0.35; }
+
+@media (hover: none) {
+    .v2-product-step-number { opacity: 0.28; }
+}
+
+.v2-product-step-number {
+    display: block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    font-weight: 400;
+    color: var(--gold);
+    opacity: 0.15;
+    line-height: 1;
+    margin-bottom: 16px;
+    letter-spacing: 0.02em;
+    transition: opacity 0.2s ease;
+}
+
+.v2-product-step-icon {
+    width: 40px; height: 40px;
+    border: 1px solid var(--gold-border);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.v2-product-step-icon svg { width: 20px; height: 20px; color: var(--gold); }
+
+.v2-product-step h4 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.v2-product-step p {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+@media (min-width: 640px) { .v2-product-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 960px) { .v2-product-grid { grid-template-columns: repeat(4, 1fr); } }
+
+@media (max-width: 768px) {
+    .v2-product-inner { padding: 0 20px; }
+    .v2-product-step { padding: 28px 24px; }
+    .v2-product-step-number { font-size: 3.5rem; }
+}
+
+@media (max-width: 480px) {
+    .v2-product-inner { padding: 0 16px; }
+    .v2-product-step { padding: 24px 20px; }
+    .v2-product-step-number { font-size: 3rem; }
+}

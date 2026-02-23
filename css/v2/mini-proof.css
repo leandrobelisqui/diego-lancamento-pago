@@ -1,0 +1,155 @@
+/* ─── INLINE PROOF CARD ─── */
+
+.v2-mini-proof {
+    margin: 40px 0;
+    padding: 32px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-gold);
+    border-radius: var(--radius-md);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.v2-mini-proof::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold-dark));
+}
+
+/* Desktop: 2 colunas — imagem à esquerda, texto à direita */
+@media (min-width: 960px) {
+    .v2-mini-proof {
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+        padding: 40px 48px;
+    }
+}
+
+.v2-mini-proof-img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+    display: block;
+    margin: 0 auto;
+    flex-shrink: 0;
+}
+
+@media (min-width: 960px) {
+    .v2-mini-proof-img {
+        width: 340px;
+        max-width: 340px;
+        margin: 0;
+    }
+}
+
+.v2-mini-proof-content { min-width: 0; flex: 1; }
+
+.v2-mini-proof-result {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    color: var(--gold-light);
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+}
+
+.v2-mini-proof-text {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.v2-mini-proof-author {
+    font-size: 0.78rem;
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* Dark variant (cream sections) */
+.v2-mini-proof--dark {
+    background: rgba(26, 18, 8, 0.06);
+    border-color: var(--border-cream);
+}
+.v2-mini-proof--dark .v2-mini-proof-result { color: var(--gold-dark); }
+.v2-mini-proof--dark .v2-mini-proof-text   { color: var(--text-dark-muted); }
+.v2-mini-proof--dark .v2-mini-proof-author { color: var(--gold-dark); }
+
+/* ─── RESULT CARDS (seção Prova Social) ─── */
+.v2-proof-results {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 48px 0;
+}
+
+@media (min-width: 640px) {
+    .v2-proof-results { grid-template-columns: 1fr 1fr; gap: 28px; }
+}
+
+.v2-result-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-gold);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.v2-result-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold-dark));
+}
+
+.v2-result-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-gold); }
+@media (hover: none) { .v2-result-card { box-shadow: 0 2px 16px rgba(201,168,76,0.08); } }
+
+.v2-result-card-img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    display: block;
+}
+
+.v2-result-card-body { display: flex; flex-direction: column; gap: 8px; }
+
+.v2-result-card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    color: var(--gold-light);
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+}
+
+.v2-result-card-sub {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-style: italic;
+}
+
+@media (max-width: 480px) {
+    .v2-mini-proof { padding: 20px; }
+    .v2-result-card { padding: 18px; }
+}

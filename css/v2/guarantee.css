@@ -1,0 +1,96 @@
+/* ─── SEÇÃO 10: GARANTIA ─── */
+.v2-guarantee {
+    padding: var(--section-py) 0;
+    background: var(--bg-cream);
+    color: var(--text-dark);
+    text-align: center;
+    position: relative;
+}
+
+.v2-guarantee::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold-dark));
+}
+
+.v2-guarantee-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.v2-guarantee-shield {
+    width: 96px;
+    height: 96px;
+    border: 1px solid var(--gold-border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 32px;
+    position: relative;
+    background: rgba(201,168,76,0.08);
+}
+
+.v2-guarantee-shield::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.1);
+}
+
+.v2-guarantee-shield::after {
+    content: '';
+    position: absolute;
+    inset: -16px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.05);
+}
+
+.v2-guarantee-shield-inner svg {
+    width: 36px;
+    height: 36px;
+    color: var(--gold);
+}
+
+.v2-guarantee h3 {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    margin-bottom: 16px;
+}
+
+.v2-guarantee-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 28px;
+    line-height: 1.2;
+}
+
+.v2-guarantee-text {
+    font-size: 0.98rem;
+    color: var(--text-dark-muted);
+    margin-bottom: 20px;
+    line-height: 1.85;
+}
+
+.v2-guarantee-bold {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.7;
+    font-style: italic;
+    border-top: 1px solid var(--border-cream);
+    padding-top: 20px;
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) { .v2-guarantee-inner { padding: 0 20px; } }
+@media (max-width: 480px) { .v2-guarantee-inner { padding: 0 16px; } }

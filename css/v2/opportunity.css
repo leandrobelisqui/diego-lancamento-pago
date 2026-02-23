@@ -1,0 +1,75 @@
+/* ─── SEÇÃO 3: A OPORTUNIDADE ─── */
+.v2-opportunity {
+    padding: var(--section-py) 0;
+    background: var(--bg-base);
+    position: relative;
+}
+
+.v2-opportunity-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+}
+
+.v2-opportunity-header { max-width: 560px; }
+
+.v2-opportunity-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.v2-opportunity-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px; height: 1px;
+    background: var(--gold);
+}
+
+.v2-opportunity-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.6rem, 5vw, 5rem);
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+}
+
+.v2-opportunity-title .highlight { color: var(--gold); }
+
+.v2-opportunity-body { max-width: 640px; }
+
+.v2-opportunity-text {
+    font-size: 1.02rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.85;
+}
+
+.v2-opportunity-text:last-child { margin-bottom: 0; }
+
+@media (min-width: 960px) {
+    .v2-opportunity-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: start;
+    }
+    .v2-opportunity-header { max-width: 100%; }
+    .v2-opportunity-title { position: sticky; top: 40px; }
+    /* Depoimento ocupa as 2 colunas */
+    .v2-opportunity-inner > .v2-mini-proof {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) { .v2-opportunity-inner { padding: 0 20px; } }
+@media (max-width: 480px) { .v2-opportunity-inner { padding: 0 16px; } }
