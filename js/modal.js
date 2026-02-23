@@ -56,7 +56,7 @@
     });
 
     // ─── Connect all CTA buttons ───
-    document.querySelectorAll('.cta-btn, .bar-cta').forEach(function (btn) {
+    document.querySelectorAll('.cta-btn, .bar-cta, .v2-cta-btn').forEach(function (btn) {
         btn.addEventListener('click', openModal);
     });
 
